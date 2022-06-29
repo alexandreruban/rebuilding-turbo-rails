@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to articles_path }
-      format.turbo_stream
+      format.turbo_stream { render turbo_stream: turbo_stream.remove(@article) }
     end
   end
 
