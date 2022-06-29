@@ -1,0 +1,5 @@
+<%= turbo_stream.remove @article %>
+<%= turbo_stream.update @article, partial: "articles/article", locals: { article: @article } %>
+<%= turbo_stream.replace @article, "Something else" %>
+<%= turbo_stream.prepend "articles", @article %>
+<%= turbo_stream.prepend "articles" do %><%= render @article %><% end %>
