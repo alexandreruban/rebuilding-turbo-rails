@@ -11,6 +11,18 @@ module TurboClone::Broadcastable
     TurboClone::StreamsChannel.broadcast_append_to(*streamables, target: target, **broadcast_rendering_with_defaults(rendering))
   end
 
+  def broadcast_prepend_to(*streamables, target: broadcast_target_default, **rendering)
+    TurboClone::StreamsChannel.broadcast_prepend_to(*streamables, target: target, **broadcast_rendering_with_defaults(rendering))
+  end
+
+  def broadcast_replace_to(*streamables, target: self, **rendering)
+    TurboClone::StreamsChannel.broadcast_replace_to(*streamables, target: target, **broadcast_rendering_with_defaults(rendering))
+  end
+
+  def broadcast_remove_to(*streamables, target: self)
+    TurboClone::StreamsChannel.broadcast_remove_to(*streamables, target: target)
+  end
+
   private
 
   def broadcast_rendering_with_defaults(rendering)
