@@ -10,3 +10,5 @@ gem "sprockets-rails"
 gem "puma"
 
 gem "importmap-rails"
+
+gem "redis"
