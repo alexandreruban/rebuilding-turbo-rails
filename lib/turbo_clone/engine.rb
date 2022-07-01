@@ -4,6 +4,13 @@ module TurboClone
   class Engine < ::Rails::Engine
     isolate_namespace TurboClone
 
+    config.turbo = ActiveSupport::OrderedOptions.new
+
+    initializer "turbo.signed_stream_verifier_key" do
+      TurboClone.signed_stream_verifier_key = config.turbo.signed_stream_verifier_key ||
+        Rails.application.key_generator.generate_key("turbo/signed_stream_verifier_key")
+    end
+
     initializer "turbo.media_type" do
       Mime::Type.register "text/vnd.turbo-stream.html", :turbo_stream
     end
