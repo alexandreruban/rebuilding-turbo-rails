@@ -1,28 +1,22 @@
-# TurboClone
-Short description and motivation.
+# Rebuilding turbo-rails tutorial
 
-## Usage
-How to use my plugin.
+This is the source code for [the rebuilding turbo-rails tutorial][tutorial]. Each commit corresponds to one video of the course, so it's easy for you to follow along.
 
-## Installation
-Add this line to your application's Gemfile:
+In this tutorial, we will:
 
-```ruby
-gem "turbo_clone"
-```
+- Learn to create Rails engines from scratch thanks  to the `rails plugin new` command
+- Rebuild together all the backend [turbo-rails][turbo_rails] features
+- Learn how to test our engine both manually and with automated tests thanks to the `test/dummy` Rails application
+- Learn how to create installation rake tasks thanks to Rails templates
+- Test our finalized engine in a real Ruby on Rails application
 
-And then execute:
-```bash
-$ bundle
-```
+By the end of the tutorial, you will understand in-depth how [turbo-rails][turbo_rails] works under the hood and even be able to contribute to it yourself! You will also be able to create your own extensions to the Ruby on Rails framework.
 
-Or install it yourself as:
-```bash
-$ gem install turbo_clone
-```
+All the knowledge we will learn together applies to other Rails engines such as `ActionText` or `ActiveStorage`, for example.
 
-## Contributing
-Contribution directions go here.
+It will also teach you how to read the source code of a gem to understand it when the documentation is scarce.
 
-## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Let's [get started][tutorial]!
+
+[tutorial]: https://hotrails.podia.com/rebuilding-turbo-rails
+[turbo_rails]: https://github.com/hotwired/turbo-rails/
